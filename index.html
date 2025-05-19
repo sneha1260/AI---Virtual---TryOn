@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Virtual Try-On</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1 style="text-align:center;">AI Virtual Try-On</h1>
+
+  <div id="outfit-buttons">
+    <button onclick="changeOutfit('tshirt.png', 'tshirt')">T-Shirt</button>
+    <button onclick="changeOutfit('hoodie.png', 'hoodie')">Hoodie</button>
+    <button onclick="changeOutfit('dress.png', 'dress')">Dress</button>
+  </div>
+
+  <div id="video-container">
+    <video id="video" autoplay muted></video>
+    <canvas id="canvas" width="640" height="480"></canvas>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/posenet"></script>
+  <script src="script.js"></script>
+</body>
+</html>
